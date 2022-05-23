@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+    <style type="text/css">
+        #map{ width:700px; height: 500px; }
+      </style>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+      <title>Save Marker Example</title>
+
+</head>
+<body>
+    <h1>Safer Streets Community Reporting</h1>
+    <h2>Welcome to the Safer Streets submission page. If you 
+        have observed a vehicle presenting a danger to our community please provide the 
+        details below. Our local Law Enforcement Monitors these submissions and provides 
+        support services to better serve our community.</h2>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+    <div id="plateInfo">
+            <h3> Incident Information</h3>
+
+            <label for="License Plate">License Plate State:</label>
+            <select name="state" id="state">
+              <option value="Washington, DC">Washington, DC</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Virginia">Virginia</option>
+            </select> <br>
+
+            <label for="Plate Number">Plate Number:</label>
+            <input type="text" id="PlateNumber" name="PlateNumber"><br>
+
+            <label for="Violation">Violation:</label>
+                <select name="violation" id="violation">
+                <option value="Speeding">Speeding</option>
+                <option value="Wreckless Driving">Wreckless Driving</option>
+                <option value="Passing in No Passing Zone">Passing in No Passing Zone</option>
+                <option value="Failure to Stop for Pedestrians in Crosswalk">Failure to Stop for Pedestrians in Crosswalk</option>
+                <option value="Suspected Driving under the Influence (DUI)">Suspected Driving under the Influence (DUI)</option>
+                <option value="Failure to Stop for a School Bus">Failure to Stop for a School Bus</option>
+                <option value="Other Violation">Other Violation</option>
+                </select> <br>
+
+            <label for="Location">Location:</label>
+            <input type="text" id="Location" name="Location"><br>
+
+            <h4>Select a location!</h4>
+                 <p>Click on a location on the map to select it. Drag the marker to change location.</p>
+        
+                    <!--map div-->
+                    <div id="map"></div>
+                    
+                    <!--our form-->
+                    <h5>Chosen Location</h5>
+                    <form method="post">
+                        <input type="text" id="lat" readonly="yes"><br>
+                        <input type="text" id="lng" readonly="yes">
+                    </form>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    <script type="text/javascript" src="map.js"></script>
+</body>
+</html>
