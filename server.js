@@ -2,21 +2,40 @@ require("dotenv").config();
 const express = require("express");
 const db = require("./Back End/db/conn");
 const app = express();
+app.use(express.json());
 
 app.use(express.static("Front End"));
 
-app.post("/api/reports")
-
-app.get("/api/reports", (_ , res) => {
+app.post("/api/reports", async (req , res) => {
   try {
-    db.query("SELECT * FROM plates").then((data) => {
-      res.json(data.rows);
-    });
+    const data = await db.query('INSERT INTO submitter (name, email) VALUES ($1, $2) RETURNING *;', [req.body.name, req.body.email])
+    res.json(data.rows);
+    //console.log(data.rows)
   } catch (error) {
-    res.send("some error")
+    // res.send("some error")
+    console.log(error)
   }
   
 });
+
+app.get("/api/reports", async (_ , res) => {
+  try {
+    const data = await db.query("SELECT * FROM submitter")
+    res.json(data.rows);
+  } catch (error) {
+    res.send("some error")
+  }
+});
+
+app.delete('/api/reports/:id', async (req, res) => {
+  try {
+     const data = await db.query('DELETE FROM submitter WHERE id=$1;', [req.params.id]);
+          res.json(data.rows);
+      }
+      catch (error) {
+      res.json(error);
+  }
+})
 
 app.listen(3000, () => { //process.env.PORT
   console.log(`listening on Port ${3000}`);
