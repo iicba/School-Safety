@@ -4,6 +4,7 @@ const db = require("./Back End/db/conn");
 const app = express();
 app.use(express.json());
 
+
 app.use(express.static("Front End"));
 
 app.post("/api/reports", async (req , res) => {
@@ -40,6 +41,9 @@ app.delete('/api/reports/:id', async (req, res) => {
 app.listen(3000, () => { //process.env.PORT
   console.log(`listening on Port ${3000}`);
 });
+
+
+
 
 // require("dotenv").config(); // TODO: ADD THIS LINE
 // const express = require("express");

@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="app.js"></script>
     <title>Save Marker Example</title>
 
 </head>
@@ -22,11 +23,8 @@
         <form>
             <div>
             <h3>Please provide your contact information below</h3>
-            <label for="fname">First name:</label>
-            <input type="text" id="fname" name="fname"><br>
-
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname"><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
 
             <label for="email">Email:</label>
             <input type="text" id="email" name="email"><br>
@@ -71,6 +69,9 @@
             <input id= "submit" type="submit" value="Submit">
 
         </form>
+    </div>
+    <div>
+        <ul id="destination">Test</ul>
     </div>
     <script type="text/javascript" src="map.js"></script>
 </body>
