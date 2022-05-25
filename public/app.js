@@ -18,21 +18,25 @@
 //     })
 //     .catch((err) => console.log(err));
 // }
+// const body = document.querySelector('body');
+// const btn = document.querySelector('#btn');
+// const list = document.getElementById('destination');
+
+// fetch("http://localhost:3000/api/reports")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log(data)
+//         list.appendChild(data);
+//         body.appendChild(list)
+//     })
+
+
 const body = document.querySelector('body');
+const btn = document.querySelector('#btn');
 const list = document.getElementById('destination');
 
-fetch("http://localhost:3000/api/reports")
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
-        list.appendChild(data);
-        body.appendChild(list)
-    })
+addListeners()
 
-
-// const data = function fetchAPI() {
-//              fetch("/api/reports");
-// }
-
-// list.innerText(data);
-// body.appendChild(list);
+function addListeners(){
+    btn.addEventListener('click', getSubmitters)
+}
