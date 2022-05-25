@@ -1,11 +1,11 @@
 require("dotenv").config();
 const express = require("express");
-const db = require("./Back End/db/conn");
+const db = require("./db/conn");
 const app = express();
 app.use(express.json());
 
 
-app.use(express.static("Front End"));
+app.use(express.static("public"));
 
 app.post("/api/reports", async (req , res) => {
   try {

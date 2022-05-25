@@ -25,7 +25,8 @@ fetch("http://localhost:3000/api/reports")
     .then((res) => res.json())
     .then((data) => {
         console.log(data)
-        list.textContent(data);
+        list.appendChild(data);
+        body.appendChild(list)
     })
 
 

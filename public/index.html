@@ -2,15 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Server</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="app.js"></script>
+    <title>Save Marker Example</title>
+
 </head>
 <body>
-    <h1>Home Page!</h1>
-    <h3>Navigate to "/api/students" to test the "GET all students" route, and the Database</h3>
+    <div class="header">
+        <h1>Safer Streets Community Reporting</h1>
+      </div>
+    <!-- <h1>Safer Streets Community Reporting</h1> -->
+    <h4>Welcome to the Safer Streets submission page. If you 
+        have observed a vehicle presenting a danger to our community please provide the 
+        details below. Our local Law Enforcement Monitors these submissions and provides 
+        support services to better serve our community.</h4>
+        <form>
+            <div>
+            <h3>Please provide your contact information below</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br>
 
-    <h4>Open the chrome console to see your frontend JS running!</h4>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br>
 
+            <label for="phone">Phone:</label>
+            <input type="phone" id="phone" name="phone"><br>
+        </div>
+        <br>
+
+    <div id="plateInfo">
+            <h3> Incident Information</h3>
+
+            <label for="License Plate">License Plate State:</label>
+            <select name="state" id="state">
+              <option value="Washington, DC">Washington, DC</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Virginia">Virginia</option>
+            </select> <br>
+
+            <label for="Plate Number">Plate Number:</label>
+            <input type="text" id="PlateNumber" name="PlateNumber"><br>
+
+            <label for="Violation">Violation:</label>
+                <select name="violation" id="violation">
+                <option value="Speeding">Speeding</option>
+                <option value="Wreckless Driving">Wreckless Driving</option>
+                <option value="Passing in No Passing Zone">Passing in No Passing Zone</option>
+                <option value="Failure to Stop for Pedestrians in Crosswalk">Failure to Stop for Pedestrians in Crosswalk</option>
+                <option value="Suspected Driving under the Influence (DUI)">Suspected Driving under the Influence (DUI)</option>
+                <option value="Failure to Stop for a School Bus">Failure to Stop for a School Bus</option>
+                <option value="Other Violation">Other Violation</option>
+                </select> <br>
+
+            <label for="Location">Location:</label>
+            <button type="button">Use My Current Location</button> <p>or<br>
+  click on a location on the map to select it.  Drag the marker to change location.</p>
+        
+                    <!--map div-->
+                    <div id="map"></div>
+                    </form><br>
+
+            <input id= "submit" type="submit" value="Submit">
+
+        </form>
+    </div>
+    <div>
+        <ul id="destination">Test</ul>
+    </div>
+    <script type="text/javascript" src="map.js"></script>
 </body>
 </html>
