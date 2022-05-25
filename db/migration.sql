@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS reports_db;
+-- DROP DATABASE IF EXISTS reports_db;
 
-CREATE DATABASE reports_db;
+-- CREATE DATABASE reports_db;
 
-\c reports_db;
+-- \c reports_db;
 
 DROP TABLE IF EXISTS submitter;
 DROP TABLE IF EXISTS incident;
