@@ -3,7 +3,7 @@ const express = require("express");
 const db = require("./db/conn");
 const app = express();
 app.use(express.json());
-
+const PORT = process.env.PORT || 3000
 
 app.use(express.static("public"));
 
@@ -38,7 +38,7 @@ app.delete('/api/reports/:id', async (req, res) => {
   }
 })
 
-app.listen(process.env.PORT, () => { //process.env.PORT 3000
+app.listen(PORT, () => { //process.env.PORT 3000
   console.log(`listening on Port ${3000}`);
 });
 
