@@ -25,7 +25,6 @@ function addListeners(){
 }
 
 async function getSubmitters(){
-    removeElementsByClass()
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
     createElements(data)
@@ -51,6 +50,7 @@ function createSingleElement(elem){
     appendListToDiv(div)
 }
 function appendListToDiv(div){
+    removeElementsByClass()
     list.appendChild(div)
 }
 
