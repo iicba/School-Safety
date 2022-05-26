@@ -25,11 +25,11 @@ function addListeners(){
 }
 
 async function getSubmitters(){
+    removeElementsByClass()
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
     createElements(data)
     console.log(data);
-    removeElementsByClass()
 }
 
 function removeElementsByClass(divsToRemove){
