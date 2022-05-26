@@ -19,11 +19,11 @@ async function getSubmitters(){
     console.log(data);
 }
 function createList(arr){
-    document.createElement('div')
-    div.textContent = arr.name
-    div.id = "list"
-    appendListToDiv(div)
+    //document.createElement('div')
+    list.textContent = arr.name
+    //div.id = "list"
+    appendListToDiv(list)
 }
-function appendListToDiv(div){
-    list.appendChild(div)
+function appendListToDiv(list){
+    body.appendChild(list)
 }
