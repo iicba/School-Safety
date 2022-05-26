@@ -10,10 +10,11 @@ addListeners()
 function addListeners(){
     btn.addEventListener('click', getSubmitters);
     submit.addEventListener('click', () =>{
-        const textField = document.getElementById('name');
-        const textString = textField.innerText;
+        const textField = document.querySelector('#name');
+        const textString = textField.value;
         const payload = {name: textString, email: "email"};
         console.log(textField);
+        console.log(textString);
     });
 }
 
