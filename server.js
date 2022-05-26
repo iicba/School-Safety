@@ -38,25 +38,7 @@ app.delete('/api/reports/:id', async (req, res) => {
   }
 })
 
-app.listen(PORT, () => { //process.env.PORT 3000
+app.listen(PORT, () => { 
   console.log(`listening on Port ${3000}`);
 });
 
-
-
-
-// require("dotenv").config(); // TODO: ADD THIS LINE
-// const express = require("express");
-// const app = express();
-// const db= require("./db/conn.js");
-
-// app.get("api/students", (req, res) => {
-//   db.query("SELECT * FROM student", (err, data) => {
-//     res.json(data.rows);
-//   });
-// });
-
-// // TODO: Replace 3000 with process.env.PORT
-// app.listen(process.env.PORT, () => {
-//   console.log("listening on Port 3000");
-// });
