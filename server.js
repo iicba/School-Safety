@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.static("public"));
 
-app.post("/api/reports", async (req , res) => {
+app.post("/api/reports/post", async (req , res) => {
   try {
     const data = await db.query('INSERT INTO submitter (name, email) VALUES ($1, $2) RETURNING *;', [req.body.name, req.body.email])
     res.json(data.rows);
