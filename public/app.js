@@ -29,7 +29,7 @@ async function getSubmitters(){
     const data = await result.json();
     createElements(data)
     console.log(data);
-    removeElementsByClass(divsToRemove)
+    removeElementsByClass()
 }
 
 function removeElementsByClass(divsToRemove){
