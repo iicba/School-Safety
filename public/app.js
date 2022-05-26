@@ -15,6 +15,15 @@ function addListeners(){
 async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
-    list.appendChild(data),
+    createList()
     console.log(data);
+}
+function createList(arr){
+    document.createElement('div')
+    div.textContent = arr.name
+    div.id = "list"
+    appendListToDiv(div)
+}
+function appendListToDiv(div){
+    list.appendChild(div)
 }
