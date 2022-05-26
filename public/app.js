@@ -24,7 +24,14 @@ function addListeners(){
     });
 }
 
+function removeElementsByClass(divsToRemove){
+    const elements = document.getElementsByClassName(divsToRemove);
+    while(elements.length > 0){
+        elements[0].parentNode.removeChild(elements[0]);
+    }
+}
 async function getSubmitters(){
+    removeElementsByClass()
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
     createElements(data)
@@ -41,6 +48,7 @@ function createSingleElement(elem){
     const div = document.createElement('div')
     div.textContent = elem.name
     div.id = elem.id
+    div.className = "divsToRemove"
     appendListToDiv(div)
 }
 function appendListToDiv(div){
