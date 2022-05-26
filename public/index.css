@@ -19,11 +19,6 @@ body{
     background-color: rgb(236, 239, 252);
 }
 
-#submit{
-    width: 40em;
-    
-}
-
 #destination{
     font-size: large;
     text-align: center;
