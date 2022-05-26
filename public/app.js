@@ -40,3 +40,9 @@ addListeners()
 function addListeners(){
     btn.addEventListener('click', getSubmitters)
 }
+
+async function getSubmitters(){
+    const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports')
+    const data = await result.json()
+    console.log(data)
+}
