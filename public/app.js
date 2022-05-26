@@ -68,7 +68,7 @@ const postText = async (payload) => {
   };
 
   const deleteName = async (payload2) => {
-    const rawResponse = await fetch(`/api/reports/${textString}`, {
+    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
