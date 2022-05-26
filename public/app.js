@@ -31,6 +31,6 @@ function createSingleElement(elem){
     div.id = elem.id
     appendListToDiv(div)
 }
-function appendListToDiv(list){
+function appendListToDiv(div){
     list.appendChild(div)
 }
