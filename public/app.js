@@ -13,7 +13,7 @@ function addListeners(){
         const textField = document.getElementById('name');
         const textString = textField.innerText;
         const payload = {name: textString, email: "email"};
-        console.log(textString);
+        console.log(textField);
     });
 }
 
