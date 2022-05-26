@@ -26,7 +26,7 @@ function addListeners(){
 
 function removeElementsByClass(divsToRemove){
     const elements = document.getElementsByClassName(divsToRemove);
-    body.removeChild(elements);
+    list.removeChild(elements);
 }
 async function getSubmitters(){
     removeElementsByClass()
