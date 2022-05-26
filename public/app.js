@@ -24,16 +24,17 @@ function addListeners(){
     });
 }
 
-function removeElementsByClass(divsToRemove){
-    const elements = document.getElementsByClassName(divsToRemove);
-    list.removeChild(elements);
-}
 async function getSubmitters(){
-    removeElementsByClass()
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
     createElements(data)
     console.log(data);
+    removeElementsByClass(divsToRemove)
+}
+
+function removeElementsByClass(divsToRemove){
+    const elements = document.getElementsByClassName(divsToRemove);
+    list.removeChild(elements);
 }
 
 function createElements(arr){
