@@ -19,7 +19,7 @@ function addListeners(){
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const payload2 = {textString};
+        const payload2 = {id:textString};
         deleteName(payload2)
     });
 }
@@ -48,7 +48,7 @@ function appendListToDiv(div){
 }
 
 const textField = document.getElementById('name');
-const textString = textField.innerText;
+const textString = textField.value;
 const payload = {name: textString, email: "email"};
 
 
@@ -68,7 +68,7 @@ const postText = async (payload) => {
   };
 
   const deleteName = async (payload2) => {
-    const rawResponse = await fetch(`/api/reports/${payload2}`, {
+    const rawResponse = await fetch(`/api/reports/${textString}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
