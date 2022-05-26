@@ -33,7 +33,7 @@ async function getSubmitters(){
 
 function removeElementsByClass(divsToRemove){
     const elements = document.getElementsByClassName('divsToRemove');
-    list.remove(elements);
+    list.removeChild(elements);
 }
 
 function createElements(arr){
