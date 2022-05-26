@@ -16,7 +16,7 @@ async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
     createList(data)
-    console.log(data.row);
+    console.log(data);
 }
 function createList(arr){
     //document.createElement('div')
