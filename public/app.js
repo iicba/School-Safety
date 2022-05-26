@@ -13,8 +13,7 @@ function addListeners(){
         const textField = document.querySelector('#name');
         const textString = textField.value;
         const payload = {name: textString, email: "email"};
-        console.log(textField);
-        console.log(textString);
+        postText(payload)
     });
 }
 
@@ -47,7 +46,7 @@ const payload = {name: textString, email: "email"};
 
 
 
-const postText = async () => {
+const postText = async (payload) => {
     const rawResponse = await fetch('/api/reports/post', {
       method: 'POST',
       headers: {
