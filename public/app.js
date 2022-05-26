@@ -15,15 +15,22 @@ function addListeners(){
 async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
-    createList(data)
+    createElements(data)
     console.log(data);
 }
-function createList(arr){
-    //document.createElement('div')
-    list.textContent = arr
-    //div.id = "list"
-    appendListToDiv(list)
+
+function createElements(arr){
+    arr.forEach((elem) => {
+        createSingleElement(elem)
+    });
+}
+
+function createSingleElement(elem){
+    const div = document.createElement('div')
+    div.textContent = elem.name
+    div.id = elem.id
+    appendListToDiv(div)
 }
 function appendListToDiv(list){
-    body.appendChild(list)
+    list.appendChild(div)
 }
