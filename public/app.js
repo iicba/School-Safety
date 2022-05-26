@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
 const btn = document.getElementById('btn');
 const list = document.getElementById('destination');
-
+const submit = document.getElementById('submit')
 
 console.log(btn)
 
@@ -9,7 +9,10 @@ addListeners()
 
 function addListeners(){
     btn.addEventListener('click', getSubmitters);
-    
+
+    submit.addEventListener('click', () =>{
+        console.log(textString);
+    });
 }
 
 async function getSubmitters(){
@@ -39,7 +42,9 @@ const textField = document.getElementById('name');
 const textString = textField.innerText;
 const payload = {name: textString, email: "email"};
 
-async () => {
+
+
+const postText = async () => {
     const rawResponse = await fetch('/api/reports/post', {
       method: 'POST',
       headers: {
