@@ -1,5 +1,5 @@
 const body = document.querySelector('body');
-const btn = document.querySelector('#btn');
+const btn = document.getElementById('btn');
 const list = document.getElementById('destination');
 
 console.log(btn)
