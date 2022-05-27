@@ -25,7 +25,7 @@ function addListeners(){
     });
 }
 
-function removeElementsByClass(e){
+function removeElementsByClass(){
   const e = document.querySelector('.divsToRemove');
   e.parentElement.removeChild(e);
 }
