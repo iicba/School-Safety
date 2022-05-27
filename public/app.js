@@ -50,6 +50,7 @@ function createSingleElement(elem){
     appendListToDiv(div)
 }
 function appendListToDiv(div){
+    removeElementsByClass()
     destination.appendChild(div)
 }
 
