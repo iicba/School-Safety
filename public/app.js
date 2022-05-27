@@ -15,6 +15,7 @@ function addListeners(){
         const textString = textField.value;
         const payload = {name: textString, email: "email"};
         postText(payload)
+        removeElementsByClass()
     });
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
@@ -50,7 +51,6 @@ function createSingleElement(elem){
     appendListToDiv(div)
 }
 function appendListToDiv(div){
-    removeElementsByClass()
     destination.appendChild(div)
 }
 
