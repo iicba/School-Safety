@@ -9,7 +9,7 @@ console.log(btn)
 addListeners()
 
 function addListeners(){
-    btn.addEventListener('click', removeElementsByClass)
+    btn.addEventListener('click', removeDivByClass)
     btn.addEventListener('click', getSubmitters);
     submit.addEventListener('click', () =>{
         const textField = document.querySelector('#name');
