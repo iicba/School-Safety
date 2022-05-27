@@ -9,7 +9,7 @@ console.log(btn)
 addListeners()
 
 function addListeners(){
-    btn.addEventListener('click', removeDivByClass)
+    // btn.addEventListener('click', removeDivByClass)
     btn.addEventListener('click', getSubmitters);
     submit.addEventListener('click', () =>{
         const textField = document.querySelector('#name');
@@ -25,10 +25,10 @@ function addListeners(){
     });
 }
 
-function removeDivByClass(){
-  const e = document.querySelector('.divsToRemove');
-  e.destination.removeChild(e);
-}
+// function removeDivByClass(){
+//   const e = document.querySelector('.divsToRemove');
+//   e.destination.removeChild(e);
+// }
 async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
     const data = await result.json();
@@ -38,6 +38,10 @@ async function getSubmitters(){
 
 
 function createElements(arr){
+    destination.textContent = ''
+    let p = document.createElement('p')
+    p.textContent = "Results listed below:"
+    destination.appendChild(p)
     arr.forEach((elem) => {
         createSingleElement(elem)
     });
