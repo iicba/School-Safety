@@ -25,9 +25,9 @@ function addListeners(){
     });
 }
 
-function removeElementsByClass(divsToRemove){
-  const elements = document.querySelector('.divsToRemove');
-  destination.removeChild(elements);
+function removeElementsByClass(e){
+  const e = document.querySelector('.divsToRemove');
+  e.parentElement.removeChild(e);
 }
 async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
