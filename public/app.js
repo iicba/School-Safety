@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const btn = document.getElementById('btn');
-const list = document.getElementById('destination');
+const destination = document.getElementById('destination');
 const submit = document.getElementById('submit')
 const deleteBtn = document.getElementById('delete')
 
@@ -33,7 +33,7 @@ async function getSubmitters(){
 
 function removeElementsByClass(divsToRemove){
     const elements = document.getElementsByClassName('divsToRemove');
-    list.removeChild(elements);
+    destination.removeChild(elements);
 }
 
 function createElements(arr){
@@ -50,7 +50,7 @@ function createSingleElement(elem){
     appendListToDiv(div)
 }
 function appendListToDiv(div){
-    list.appendChild(div)
+    destination.appendChild(div)
 }
 
 const textField = document.getElementById('name');
