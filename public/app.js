@@ -20,7 +20,7 @@ function addListeners(){
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const payload2 = {name:textString};
+        const payload2 = {id:textString};
         deleteName(payload2)
     });
 }
@@ -80,7 +80,7 @@ const postText = async (payload) => {
   };
 
   const deleteName = async (payload2) => {
-    const rawResponse = await fetch(`/api/reports/${payload2.name}`, {
+    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
