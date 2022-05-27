@@ -40,6 +40,7 @@ async function getSubmitters(){
 function createElements(arr){
     arr.forEach((elem) => {
         createSingleElement(elem)
+        div.className = "divsToRemove"
     });
 }
 
@@ -47,7 +48,6 @@ function createSingleElement(elem){
     const div = document.createElement('div')
     div.textContent = elem.name
     div.id = elem.id
-    div.className = "divsToRemove"
     appendListToDiv(div)
 }
 function appendListToDiv(div){
