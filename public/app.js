@@ -24,7 +24,7 @@ function addListeners(){
         const textString = textField.value;
         const textField2 = document.querySelector('#email');
         const textString2 = textField2.value;
-        const payload2 = {name:textString, email:textString2};
+        const payload2 = {id:textString, email:textString2};
         deleteName(payload2)
     });
 }
