@@ -10,12 +10,12 @@ addListeners()
 
 function addListeners(){
     btn.addEventListener('click', getSubmitters);
+    btn.addEventListener('click', removeElementsByClass)
     submit.addEventListener('click', () =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
         const payload = {name: textString, email: "email"};
         postText(payload)
-        removeElementsByClass()
     });
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
