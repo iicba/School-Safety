@@ -14,7 +14,7 @@ function addListeners(){
     submit.addEventListener('click', () =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const textField2 = document.getElementById('#email');
+        const textField2 = document.querySelector('#email');
         const textString2 = textField2.value;
         const payload = {name: textString, email: textString2};
         postText(payload)
@@ -22,7 +22,7 @@ function addListeners(){
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const textField2 = document.getElementById('#email');
+        const textField2 = document.querySelector('#email');
         const textString2 = textField2.value;
         const payload2 = {id:textString, email:textString2};
         deleteName(payload2)
