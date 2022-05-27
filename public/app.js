@@ -25,7 +25,7 @@ function addListeners(){
     });
 }
 
-function removeElementsByClass(){
+function removeDivByClass(){
   const e = document.querySelector('.divsToRemove');
   e.destination.removeChild(e);
 }
@@ -40,7 +40,6 @@ async function getSubmitters(){
 function createElements(arr){
     arr.forEach((elem) => {
         createSingleElement(elem)
-        div.className = "divsToRemove"
     });
 }
 
@@ -48,6 +47,8 @@ function createSingleElement(elem){
     const div = document.createElement('div')
     div.textContent = elem.name
     div.id = elem.id
+    div.className = "divsToRemove"
+    console.log(div)
     appendListToDiv(div)
 }
 function appendListToDiv(div){
