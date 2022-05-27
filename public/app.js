@@ -24,7 +24,7 @@ function addListeners(){
         const textString = textField.value;
         const textField2 = document.querySelector('#email');
         const textString2 = textField2.value;
-        const payload2 = {id:textString, email:textString2};
+        const payload2 = {name:textString, email:textString2};
         deleteName(payload2)
     });
 }
@@ -88,7 +88,7 @@ const postText = async (payload) => {
   
 
   const deleteName = async (payload2) => {
-    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
+    const rawResponse = await fetch(`/api/reports/${payload2.name}`, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
