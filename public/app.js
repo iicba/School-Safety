@@ -86,6 +86,19 @@ const postText = async (payload) => {
   };
 
   
+  // const updateName = async (payload2) => {
+  //   const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(payload2)
+  //   });
+  //   const content = await rawResponse.json();
+  
+  //   console.log(content);
+  // };
 
   const deleteName = async (payload2) => {
     const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
