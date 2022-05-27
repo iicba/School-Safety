@@ -28,6 +28,23 @@ app.get("/api/reports", async (_ , res) => {
   }
 });
 
+app.patch('/api/reports/:id', async (req, res) => {
+  try {
+      const data = await pool.query('SELECT * FROM reports WHERE id=$1;', [req.params.id]);
+     if (data.rows.length === 0){
+         res.status(404)
+         res.send('Not Found')
+     } else {
+         const name = req.body.name || data.rows[0].name;
+         const email = req.body.email || data.rows[0].email;
+         pool.query('UPDATE submitters SET (name, email) = ($1,$2,$3) WHERE id=$4;', [name, email, req.params.id])
+         res.json({name, email});
+     }
+  } catch (error) {
+      res.json(error);
+  }
+})
+
 app.delete('/api/reports/:id', async (req, res) => {
   try {
      const data = await db.query('DELETE FROM submitter WHERE id=$1;', [req.params.id]);

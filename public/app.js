@@ -14,13 +14,17 @@ function addListeners(){
     submit.addEventListener('click', () =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const payload = {name: textString, email: "email"};
+        const textField2 = document.getElementById('#email');
+        const textString2 = textField2.value;
+        const payload = {name: textString, email: textString2};
         postText(payload)
     });
     deleteBtn.addEventListener('click',() =>{
         const textField = document.querySelector('#name');
         const textString = textField.value;
-        const payload2 = {id:textString};
+        const textField2 = document.getElementById('#email');
+        const textString2 = textField2.value;
+        const payload2 = {id:textString, email:textString2};
         deleteName(payload2)
     });
 }
@@ -61,7 +65,9 @@ function appendListToDiv(div){
 
 const textField = document.getElementById('name');
 const textString = textField.value;
-const payload = {name: textString, email: "email"};
+const textField2 = document.getElementById('email');
+const textString2 = textField2.value;
+const payload3 = {name: textString2, email: "email"};
 
 
 
@@ -78,6 +84,8 @@ const postText = async (payload) => {
   
     console.log(content);
   };
+
+  
 
   const deleteName = async (payload2) => {
     const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
