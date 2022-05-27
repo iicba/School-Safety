@@ -27,7 +27,7 @@ function addListeners(){
 
 function removeElementsByClass(){
   const e = document.querySelector('.divsToRemove');
-  e.parentElement.removeChild(e);
+  e.destination.removeChild(e);
 }
 async function getSubmitters(){
     const result = await fetch('https://powerful-brushlands-81845.herokuapp.com/api/reports');
