@@ -74,6 +74,7 @@ const payload3 = {name: textString2, email: "email"};
 
 
 const postText = async (payload) => {
+  if (payload.length !== 0){
     const rawResponse = await fetch('/api/reports/post', {
       method: 'POST',
       headers: {
@@ -84,7 +85,10 @@ const postText = async (payload) => {
     });
     const content = await rawResponse.json();
   
-    console.log(content);
+    console.log(content);}
+    else {
+      alert('Nothing submitted');
+    }
   };
 
   
