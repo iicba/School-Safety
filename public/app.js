@@ -108,7 +108,7 @@ const postText = async (payload) => {
   
   const updateSubmission = async (payload3) => {
     const rawResponse = await fetch(`/api/reports/${payload3.id}`, {
-      method: 'PATCH',
+      method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
