@@ -119,12 +119,13 @@ const postText = async (payload) => {
       },
       body: JSON.stringify(payload2)
     });
-    const content = await rawResponse.json();}
+    const content = await rawResponse.json();
+    console.log(content);
+  }
     catch (error) {
       res.json(error);
     }
-  
-    console.log(content);
+
   };
 
   const deleteName = async (payload2) => {
