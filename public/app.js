@@ -55,7 +55,7 @@ function createElements(arr){
 
 function createSingleElement(elem){
     const div = document.createElement('div')
-    div.textContent = elem.name + "              " + elem.email
+    div.textContent = elem.id + "             " + elem.name + "              " + elem.email
     div.id = elem.id
     div.className = "divsToRemove"
     console.log(div)
