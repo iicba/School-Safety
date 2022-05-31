@@ -107,6 +107,9 @@ const postText = async (payload) => {
 
   
   const updateSubmission = async (payload2) => {
+    try {
+      
+    
     const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
       method: 'POST',
       headers: {
@@ -116,7 +119,10 @@ const postText = async (payload) => {
       },
       body: JSON.stringify(payload2)
     });
-    const content = await rawResponse.json();
+    const content = await rawResponse.json();}
+    catch (error) {
+      res.json(error);
+    }
   
     console.log(content);
   };
