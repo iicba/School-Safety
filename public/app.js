@@ -38,7 +38,7 @@ function addListeners(){
       const textField2 = document.querySelector('#email');
       const textString2 = textField2.value;
       const payload2 = {id: idInputString, name:textString, email:textString2};
-      deleteName(payload2)
+      updateSubmission(payload2)
   });
 }
 
