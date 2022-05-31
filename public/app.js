@@ -109,11 +109,10 @@ const postText = async (payload) => {
   const updateSubmission = async (payload2) => {
     try {
       const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
-      method: 'POST',
+      method: 'PATCH',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-        '_method': 'PATCH'
       },
       body: JSON.stringify(payload2)
     });
@@ -121,11 +120,10 @@ const postText = async (payload) => {
     console.log(content);
   }
     catch (error) {
-      rawResponse.json(error)
+      res.json(error)
     }
   
-
-  };
+};
 
   const deleteName = async (payload2) => {
     const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
