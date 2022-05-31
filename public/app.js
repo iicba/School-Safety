@@ -65,12 +65,16 @@ function createElements(arr){
 }
 
 function createSingleElement(elem){
+  if (elem.length !==0){
     const div = document.createElement('div')
     div.textContent = elem.id + "             " + elem.name + "              " + elem.email
     div.id = elem.id
     div.className = "divsToRemove"
     console.log(div)
-    appendListToDiv(div)
+    appendListToDiv(div)}
+    else {
+      alert('Nothing submitted. Please correct your submission')
+    }
 }
 function appendListToDiv(div){
     destination.appendChild(div)
