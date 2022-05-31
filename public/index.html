@@ -21,7 +21,10 @@
         support services to better serve our community.</h4>
         <form>
             <div>
-            <h3>Please provide your contact information below</h3>
+            <h3>Please provide your contact information below to submit or update</h3>
+            <label for="updateID">Submission ID:</label>
+            <input type="text" id="updateID" name="updateID"><br>
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"><br>
 
@@ -30,24 +33,10 @@
 
             <label for="phone">Phone:</label>
             <input type="text" id="phone" name="phone"><br>
-        </div>
-        <br>
-        <div> <form>
-            <div>
-            <h3>To update a report please insert corrections below</h3>
-            <label for="updateID">Submission ID:</label>
-            <input type="text" id="updateID" name="updateID"><br>
 
-            <label for="updateName">Name:</label>
-            <input type="text" id="updateName" name="updateName"><br>
-
-            <label for="updateEmail">Email:</label>
-            <input type="text" id="updateEmail" name="updateEmail"><br>
-
-            <label for="updatePhone">Phone:</label>
-            <input type="text" id="updatePhone" name="updatePhone"><br>
 
             <button type="button" id="update">Update</button>
+            <button type="button" id="delete">Delete name with ID</button>
         </div>
         <br>
 
@@ -85,7 +74,7 @@
 
             <input id= "submit" type="button" value="Submit Name">
             <button type="button" id="btn">Get report submitters</button>
-            <button type="button" id="delete">Delete name with ID</button>
+            
         </form>
     </div>
     <div id="destination">
