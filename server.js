@@ -30,14 +30,14 @@ app.get("/api/reports", async (_ , res) => {
 
 app.patch('/api/reports/patch', async (req, res) => {
   try {
-       const data = await db.query('SELECT * FROM reports WHERE id=$1;', [req.body.id]);
+       //const data = await db.query('SELECT * FROM reports WHERE id=$1;', [req.body.id]);
     //  if (data.rows.length === 0){
     //      res.status(404)
     //      res.send('Not Found')
     //  } else {
          const name = req.body.name || data.rows[0].name;
          const email = req.body.email || data.rows[0].email;
-         db.query('UPDATE submitter SET (name, email) = ($1,$2) WHERE id= ($3);', [name, email, req.body.id])
+       const data =  db.query('UPDATE submitter SET (name, email) = ($1,$2) WHERE id= ($3);', [name, email, req.body.id])
          res.json({name, email});
     // ß }
   } catch (error) {
