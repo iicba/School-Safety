@@ -37,8 +37,8 @@ function addListeners(){
       const textString = textField.value;
       const textField2 = document.querySelector('#email');
       const textString2 = textField2.value;
-      const payload2 = {id: idInputString, name:textString, email:textString2};
-      updateSubmission(payload2)
+      const payload3 = {id:idInputString, name:textString, email:textString2};
+      updateSubmission(payload3)
   });
 }
 
@@ -107,14 +107,14 @@ const postText = async (payload) => {
   };
 
   
-  const updateSubmission = async (payload2) => {
-    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
+  const updateSubmission = async (payload3) => {
+    const rawResponse = await fetch(`/api/reports/${payload3.id}`, {
       method: 'PATCH',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(payload2)
+      body: JSON.stringify(payload3)
     });
     const content = await rawResponse.json();
   
