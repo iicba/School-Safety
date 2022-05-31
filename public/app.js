@@ -120,7 +120,7 @@ const postText = async (payload) => {
     console.log(content);
   }
     catch (error) {
-      res.json(error)
+      console.log(error)
     }
   
 };

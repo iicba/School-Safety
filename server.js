@@ -30,7 +30,7 @@ app.get("/api/reports", async (_ , res) => {
 
 app.patch('/api/reports/:id', async (req, res) => {
   try {
-      const data = await pool.query('SELECT * FROM reports WHERE id=$1;', [req.params.id]);
+      const data = await db.query('SELECT * FROM reports WHERE id=$1;', [req.params.id]);
      if (data.rows.length === 0){
          res.status(404)
          res.send('Not Found')
