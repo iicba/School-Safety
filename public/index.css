@@ -23,3 +23,16 @@ body{
     font-size: large;
     text-align: center;
 }
+
+.hide{}
+
+.divsToRemove {
+    width: 600px;
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+  }
+  
