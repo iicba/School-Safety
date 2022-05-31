@@ -28,7 +28,7 @@ app.get("/api/reports", async (_ , res) => {
   }
 });
 
-app.patch('/api/reports/patch', async (req, res) => {
+app.patch('/api/reports/:id', async (req, res) => {
   try {
        //const data = await db.query('SELECT * FROM reports WHERE id=$1;', [req.body.id]);
     //  if (data.rows.length === 0){
