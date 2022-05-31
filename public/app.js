@@ -3,9 +3,8 @@ const btn = document.getElementById('btn');
 const destination = document.getElementById('destination');
 const submit = document.getElementById('submit')
 const deleteBtn = document.getElementById('delete')
-const updateBtn =document.getElementById('update')
+const updateBtn = document.getElementById('update')
 
-console.log(btn)
 
 addListeners()
 
@@ -37,7 +36,7 @@ function addListeners(){
       const textString = textField.value;
       const textField2 = document.querySelector('#email');
       const textString2 = textField2.value;
-      const payload3 = {id:idInputString, name:textString, email:textString2};
+      const payload3 = {id: idInputString, name: textString, email: textString2};
       updateSubmission(payload3)
   });
 }
@@ -80,11 +79,11 @@ function appendListToDiv(div){
     destination.appendChild(div)
 }
 
-const textField = document.getElementById('name');
-const textString = textField.value;
-const textField2 = document.getElementById('email');
-const textString2 = textField2.value;
-const payload3 = {name: textString2, email: "email"};
+// const textField = document.getElementById('name');
+// const textString = textField.value;
+// const textField2 = document.getElementById('email');
+// const textString2 = textField2.value;
+// const payload3 = {name: textString2, email: "email"};
 
 
 
