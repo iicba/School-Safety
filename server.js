@@ -42,7 +42,7 @@ app.patch('/api/reports/patch', async (req, res) => {
          res.json({name, email});
     // ß }
   } catch (error) {
-      res.json(error);
+      res.send(error);
   }
 })
 
