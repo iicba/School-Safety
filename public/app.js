@@ -3,6 +3,7 @@ const btn = document.getElementById('btn');
 const destination = document.getElementById('destination');
 const submit = document.getElementById('submit')
 const deleteBtn = document.getElementById('delete')
+const updateBtn =document.getElementById('update')
 
 console.log(btn)
 
@@ -29,6 +30,16 @@ function addListeners(){
         const payload2 = {id: idInputString, name:textString, email:textString2};
         deleteName(payload2)
     });
+    updateBtn.addEventListener('click',() =>{
+      const idInput = document.querySelector('#updateID');
+      const idInputString = idInput.value;
+      const textField = document.querySelector('#name');
+      const textString = textField.value;
+      const textField2 = document.querySelector('#email');
+      const textString2 = textField2.value;
+      const payload2 = {id: idInputString, name:textString, email:textString2};
+      deleteName(payload2)
+  });
 }
 
 // function removeDivByClass(){
