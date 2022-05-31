@@ -20,11 +20,13 @@ function addListeners(){
         postText(payload)
     });
     deleteBtn.addEventListener('click',() =>{
+        const idInput = document.querySelector('#name');
+        const idInputString = idInput.value;
         const textField = document.querySelector('#name');
         const textString = textField.value;
         const textField2 = document.querySelector('#email');
         const textString2 = textField2.value;
-        const payload2 = {id:textString, email:textString2};
+        const payload2 = {id: idInputString, name:textString, email:textString2};
         deleteName(payload2)
     });
 }
@@ -86,19 +88,19 @@ const postText = async (payload) => {
   };
 
   
-  // const updateName = async (payload2) => {
-  //   const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
-  //     method: 'PATCH',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(payload2)
-  //   });
-  //   const content = await rawResponse.json();
+  const updateSubmission = async (payload2) => {
+    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload2)
+    });
+    const content = await rawResponse.json();
   
-  //   console.log(content);
-  // };
+    console.log(content);
+  };
 
   const deleteName = async (payload2) => {
     const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
