@@ -108,9 +108,7 @@ const postText = async (payload) => {
   
   const updateSubmission = async (payload2) => {
     try {
-      
-    
-    const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
+      const rawResponse = await fetch(`/api/reports/${payload2.id}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -123,8 +121,9 @@ const postText = async (payload) => {
     console.log(content);
   }
     catch (error) {
-      res.json(error);
+      rawResponse.json(error)
     }
+  
 
   };
 
