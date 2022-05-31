@@ -111,7 +111,8 @@ const postText = async (payload) => {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        '_method': 'PATCH'
       },
       body: JSON.stringify(payload3)
     });
