@@ -20,7 +20,7 @@ function addListeners(){
         postText(payload)
     });
     deleteBtn.addEventListener('click',() =>{
-        const idInput = document.querySelector('#name');
+        const idInput = document.querySelector('#updateID');
         const idInputString = idInput.value;
         const textField = document.querySelector('#name');
         const textString = textField.value;
