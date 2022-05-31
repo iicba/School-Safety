@@ -37,9 +37,9 @@ app.patch('/api/reports/:id', async (req, res) => {
     //  } else {
          const name = req.body.name || data.rows[0].name;
          const email = req.body.email || data.rows[0].email;
-         const id = req.body.id || data.rows[0].id;
+         //const id = req.body.id || data.rows[0].id;
        const data = await db.query('UPDATE submitter SET (name, email) = ($1,$2) WHERE id=$3;', [name, email, req.params.id])
-         res.json({name, email});
+         res.json(data.rows);
     // ß }
   } catch (error) {
       res.send(error);
